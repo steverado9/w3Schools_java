@@ -1,0 +1,82 @@
+    WHAT IS JAVA?
+Java is a popular programming language and It is owned by Oracle.
+It is used for:
+-Mobile applications (specially Android apps)
+-Desktop applications
+-Web applications
+-Web servers and application servers
+-Games
+-Database connection And much, much more!
+    Why Use Java?
+-Java works on different platforms (Windows, Mac, Linux, Raspberry Pi, etc.).
+-It is one of the most popular programming languages in the world.
+-Java is an object oriented language which gives a clear structure to programs and allows
+code to be reused, lowering development costs.
+    How to write Java code(syntax)
+-In Java, every application begins with a class name
+-The class must match the filename.
+-The class name should always start with an uppercase first letter.
+    The main method
+The main() method is required and you will see it in every Java program.
+Any code inside the main() method will be executed.
+The curly braces {} marks the beginning and the end of a block of code.
+    System.out.println()
+Inside the main() method, we can use the println() method to print a line of text to the screen/console.
+-System is a built-in Java class that contains useful members, such as out, which is short for "output".
+You should also note that each code statement must end with a semicolon (;).
+    Print Text
+-println() method, short for "print line", is used to print/output a value to the screen (or a file).
+You can add as many println() methods as you want.
+Note that it will add a new line for each method.
+-Double Quotes
+Text must be wrapped inside double quotations marks "".
+-print() method: which is similar to println()
+The only difference is that it does not insert a new line at the end of the output.
+    Print Numbers
+You can also use the println() method to print numbers.
+However, unlike text, we don't put numbers inside double quotes.
+    Java Comments
+Comments can be used to explain Java code, and to make it more readable.
+It can also be used to prevent execution when testing alternative code.
+-Single-line Comments
+Single-line comments start with two forward slashes (//).
+Any text between // and the end of the line is ignored by Java (will not be executed).
+-Java Multi-line Comments
+Multi-line comments start with /* and ends with */.
+Any text between /* and */ will be ignored by Java.
+    Java Variables
+Variables are containers for storing data values.
+In Java, there are different types of variables, for example
+-String: stores text, such as "Hello". String values are surrounded by double quotes.
+-int: stores integers (whole numbers), without decimals, such as 123 or -123.
+-float: stores floating point numbers, with decimals, such as 19.99 or -19.99.
+-char: stores single characters, such as 'a' or 'B'. Char values are surrounded by single quotes.
+-boolean: stores values with two states: true or false.
+    Declaring (Creating) Variables
+To create a variable in Java, you need to:
+-Choose a type (like int or String).
+-Give the variable a name (like x, age, or name).
+-Optionally assign it a value using "=".
+Syntax
+type variableName = value;
+    Final Variables
+If you don't want to overwrite existing values, use the final keyword
+(this will declare the variable as "final" or "constant", which means unchangeable and read-only).
+    Display Variables
+The println() method is often used to display variables.
+    The + operator
+-To combine both text and a variable, use the + character.
+-You can also use the + character to add a variable to another variable.
+-For numeric values, the + character works as a mathematical operator
+-To declare more than one variable of the same type, you can use a comma-separated list.
+    Java Identifiers
+All Java variables must be identified with unique names.
+These unique names are called identifiers.
+Note: It is recommended to use descriptive names in order to create understandable and maintainable code
+    The general rules for naming variables are:
+-Names can contain letters, digits, underscores, and dollar signs.
+-Names must begin with a letter.
+-Names should start with a lowercase letter, and cannot contain whitespace.
+-Names can also begin with $ and _.
+-Names are case-sensitive.
+-Reserved words (like Java keywords, such as int or boolean) cannot be used as names.
