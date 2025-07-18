@@ -3,7 +3,7 @@ public class VariableTypes {
         //storing text in string
         String name = "john";
         System.out.println(name);
-        //stroing numbers
+        //storing numbers
         int myNum = 15;
         System.out.println(myNum);
         //declearing a variable and assign a value later
