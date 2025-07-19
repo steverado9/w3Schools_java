@@ -152,3 +152,136 @@ In Java, there are two types of casting:
 byte -> short -> char -> int -> long -> float -> double.
 2)Narrowing Casting (manually):  converting a larger type to a smaller size type.
 double -> float -> long -> int -> char -> short -> byte.
+
+    Java Operators
+Operators are used to perform operations on variables and values.
+Java divides the operators into the following groups:
+1)Arithmetic operators
+2)Assignment operators
+3)Comparison operators
+4)Logical operators
+5)Bitwise operators
+    1.Arithmetic operators
+Arithmetic operators are used to perform common mathematical operations.
+1)Addition(+): Adds together two values.
+2)Subtraction(-): Subtracts one value from another.
+3)Multiplication(*): Multiplies two values.
+4)Division(/): Divides one value by another.
+5)Modulus(%): Returns the division remainder.
+6)Increment(++): Increases the value of a variable by 1.
+7)Decrement(--): Decreases the value of a variable by 1.
+    2.Assignment operators
+-Assignment operators(=): are used to assign values to variables.
+-Addition assignment operator(+=): adds a value to a variable. etc.
+    3.Java Comparison Operators
+Comparison operators are used to compare two values (or variables).
+The return value of a comparison is either true or false.
+1)Equal to(==)
+2)Not equal (!=)
+3)Greater than(>)
+4)Less than(<)
+5)Greater than or equal to (>=)
+6)Less than or equal to (<=)
+    4. Logical Operators
+You can also test for true or false values with logical operators.
+1)Logical and (&&): returns true if both statements are true.
+2)Logical or (||): returns true if one of the statement is true.
+3)Logical not (!): reverses the result. i.e not this condition.
+
+    Java Strings
+Strings are used for storing text.
+A String in Java is actually an object,
+which contain methods that can perform certain operations on strings.
+    String Methods
+1)length(): used to check the length(size) of a string.
+2)toUpperCase(): converts a string to uppercase.
+3)toLowerCase(): converts a string to lowercase.
+4)indexOf(parameter): This return the index(the position) of the first occurrence of a specified text in a string.
+Java counts positions from zero.
+    String Concatenation
+The + operator can be used between strings to combine them.
+This is called concatenation.
+5)concat(): You can use this method to concat two strings.
+    Java Numbers and Strings
+Java uses the + operator for both addition and concatenation.
+Numbers are added. Strings are concatenated.
+If you add a number and a string, the result will be a string concatenation.
+    Java Special Characters(Escape characters)
+backlash(\) escape character: turns special characters into string characters.
+
+    Java Math
+The Java Math class has many methods that allows you to perform mathematical tasks on numbers.
+1)Math.max(x,y): This method is used to find the highest value of x and y.
+2)Math.min(x,y): This method can be used to find the lowest value of x and y.
+3)Math.sqrt(x): This method returns the square root of x.
+4)Math.abs(x): This method returns the absolute (positive) value of x.
+5)Math.random(): returns a random number between 0.0 (inclusive), and 1.0 (exclusive).
+
+    Java Booleans
+Java has a boolean data type, which can store true or false values.
+-Boolean expression: This returns a boolean value: true or false.
+
+    Java If ... Else
+-we use if to specify a block of code to be executed, if a specified condition is true.
+-we use else to specify a block of code to be executed, if the same condition is false.
+-Use else if to specify a new condition to test, if the first condition is false.
+-Use switch to specify many alternative blocks of code to be executed.
+    Ternary operator
+This is short-hand for if-else.
+It is used to replace simple if else statements.
+Syntax
+varaible = (condition) ? expressionTrue : expressionFalse;
+     Switch Statements
+Instead of writing many if..else statements, you can use the switch statement.
+The switch statement selects one of many code blocks to be executed.
+This is how it works:
+-The switch expression is evaluated once.
+-The value of the expression is compared with the values of each case.
+-If there is a match, the associated block of code is executed.
+    The break Keyword
+A break can save a lot of execution time because it "ignores" the execution of all the rest of the code in the switch block.
+    The default Keyword
+The default keyword specifies some code to run if there is no case match.
+
+    Loops
+Loops can execute a block of code as long as a specified condition is reached.
+    Types of loops
+1)While loop: loops through a block of code as long as a specified condition is true.
+2)Do/While loop: This loop will execute the code block once, before checking if the condition is true.
+The loop as long as the condition is true.
+3)For loop: When you know exactly how many times you want to loop through a block of code,
+use the for loop instead of a while loop.
+-Statement 1 is executed (one time) before the execution of the code block.
+-Statement 2 defines the condition for executing the code block.
+-Statement 3 is executed (every time) after the code block has been executed.
+4)For-each Loop: This is used exclusively to loop through elements in an array (or other data structures):
+
+    Java Break and Continue
+1)Break statement(stop executing)
+It was used to "jump out" of a switch statement.
+The break statement can also be used to jump out of a loop.
+2)continue statement(skip condition and continue executing)
+The continue statement breaks one iteration (in the loop).
+if a specified condition occurs, and continues with the next iteration in the loop.
+
+    Java Arrays
+Arrays are used to store multiple values in a single variable.
+To declare an array, define the variable type with square brackets.
+    Access the Elements of an Array
+You can access an array element by referring to the index number.
+Note: Array indexes start with 0: [0] is the first element. [1] is the second element, etc.
+    Change an Array Element
+To change the value of a specific element, refer to the index number
+    Array Length
+To find out how many elements an array has.
+    Loop Through an Array
+You can loop through the array elements with the for loop,
+and use the length property to specify how many times the loop should run.
+    Multidimensional Arrays
+A multidimensional array is an array of arrays.
+Multidimensional arrays are useful when you want to store data as a tabular form, like a table with rows and columns.
+    Access Elements
+To access the elements of a Multidimensional array,
+specify two indexes: one for the array, and one for the element inside that array.
+    Java Methods
+A method is a block of code which only runs when it is called.
