@@ -336,3 +336,375 @@ Classes and objects are the two main aspects of object-oriented programming.
 So, a class is a template for objects,
 and an object is an instance of a class.
 When the individual objects are created, they inherit all the variables and methods from the class.
+A Class is like an object constructor, or a "blueprint" for creating objects.
+    Create a Class
+To create a class, use the keyword class followed by the class name.
+    Create an Object
+To create an object,
+-specify the class name,
+-followed by the object name,
+-and use the keyword new
+    Using Multiple Classes
+You can also create an object of a class and access it in another class.
+    Java Class Attributes
+Class attributes are variables within a class.
+Another term for class attributes is fields.
+    Accessing Attributes
+-You can access attributes by creating an object of the class.
+by using the dot syntax (.).
+-You can also modify attribute values.
+-If you don't want the ability to override existing values, declare the attribute as final.
+-If you create multiple objects of one class,
+-you can change the attribute values in one object, without affecting the attribute values in the other.
+    Java Class Methods
+methods are declared within a class, and that they are used to perform certain actions.
+    Static vs. Public
+You will often see Java programs that have either static or public attributes and methods.
+-Static methods can be called without creating objects.
+-Public methods must be called by creating objects.
+Remember that..
+The dot (.) is used to access the object's attributes and methods.
+    Using Multiple Classes
+it is a good practice to create an object of a class and access it in another class.
+-Remember that the name of the java file should match the class name.
+
+    Java Constructors
+A constructor in Java is a special method that is used to initialize objects.
+The constructor is called when an object of a class is created.
+Note that
+-the constructor name must match the class name,
+- it cannot have a return type (like void).
+-the constructor is called when the object is created.
+All classes have constructors by default:
+if you do not create a class constructor yourself, Java creates one for you.
+However, then you are not able to set initial values for object attributes.
+    Constructor Parameters
+Constructors can also take parameters, which is used to initialize attributes.
+
+    Java this
+The this keyword in Java refers to the current object in a method or constructor.
+The this keyword is often used to avoid confusion when class attributes have the
+same name as method or constructor parameters.
+
+    Accessing Class Attributes
+Sometimes a constructor or method has a parameter with the same name as a class variable.
+When this happens, the parameter temporarily hides the class variable inside that method or constructor.
+To refer to the class variable and not the parameter, you can use the this keyword.
+    Calling a Constructor from Another Constructor
+You can also use this() to call another constructor in the same class.
+This is useful when you want to provide default values or reuse initialization code instead of repeating it.
+    When to use this?
+-When a constructor or method has a parameter with the same name as a class variable,
+use this to update the class variable correctly.
+-To call another constructor in the same class and reuse code.
+
+    Java Modifiers
+The public keyword is an access modifier.
+meaning that it is used to set the access level for classes, attributes, methods and constructors.
+    We divide modifiers into two groups
+1)Access Modifiers - controls the access level.
+2)Non-Access Modifiers - do not control access level, but provides other functionality.
+    1)Access Modifiers
+a)For classes, you can use either public or default.
+public: The class is accessible by any other class
+default: The class is only accessible by classes in the same package.
+This is used when you don't specify a modifier.
+b)For attributes, methods and constructors, you can use the one of the following.
+-public: The code is accessible for all classes.
+-private: The code is only accessible within the declared class.
+-default: The code is only accessible in the same package.
+This is used when you don't specify a modifier.
+-protected: The code is accessible in the same package and subclasses.
+    2)Non-Access Modifiers
+a)For classes, you can use either final or abstract:
+-final:The class cannot be inherited by other classes.
+-abstract: The class cannot be used to create objects
+To access an abstract class, it must be inherited from another class.
+b)For attributes and methods, you can use the one of the following:
+-final: Attributes and methods cannot be overridden/modified.
+-static: Attributes and methods belongs to the class, rather than an object.
+-abstract: Can only be used in an abstract class, and can only be used on methods.
+-transient: Attributes and methods are skipped when serializing the object containing them.
+-synchronized: Methods can only be accessed by one thread at a time.
+-volatile: The value of an attribute is not cached thread-locally, and is always read from the "main memory".
+    Final
+If you don't want the ability to override existing attribute values, declare attributes as final.
+    Static
+A static method means that it can be accessed without creating an object of the class, unlike public.
+    Abstract
+An abstract method belongs to an abstract class and it does not have a body.
+The body is provided by the subclass.
+
+    Java Encapsulation
+The meaning of Encapsulation, is to make sure that "sensitive" data is hidden from users.
+To achieve this, you must:
+-declare class variables/attributes as private.
+-provide public get and set methods to access and update the value of a private variable.
+    Get and Set
+We learned from the previous chapter that private variables can only be accessed within the same class.
+i.e (an outside class has no access to it).
+However, it is possible to access them if we provide public get and set methods.
+The get method returns the variable value.
+The set method sets the value.
+    Why Encapsulation?
+-Better control of class attributes and methods.
+-Class attributes can be made read-only (if you only use the get method),
+or write-only (if you only use the set method).
+-Increased security of data.
+
+    Java Packages & API
+A package in Java is used to group related classes.
+Think of it as a folder in a file directory.
+We use packages to avoid name conflicts, and to write a better maintainable code.
+Packages are divided into two categories:
+1)Built-in Packages (packages from the Java API).
+2)User-defined Packages (create your own packages).
+    Built-in Packages
+The Java API is a library of prewritten classes.
+The library contains components for managing input, database programming, and much much more.
+The library is divided into "packages" and "classes".
+Meaning you can either
+-import a single class (along with its methods and attributes).
+-import a whole package that contain all the classes that belong to the specified package.
+To use a class or a package from the library, you need to use the "import" keyword.
+Syntax
+import package.name.Class;   // Import a single class
+import package.name.*;   // Import the whole package
+    User-defined Packages
+To create your own package, you need to understand that Java uses a file system directory to store them.
+Just like folders on your computer.
+To create a package, use the package keyword.
+
+    Java Inheritance
+In Java, it is possible to inherit attributes and methods from one class to another.
+We group the "inheritance concept" into two categories.
+-subclass (child) - the class that inherits from another class.
+-superclass (parent) - the class being inherited from.
+To inherit from a class, use the extends keyword.
+    Why And When To Use "Inheritance"?
+- It is useful for code reusability: reuse attributes and methods of an existing class when you create a new class.
+-If you don't want other classes to inherit from a class, use the final keyword.
+
+    Java Polymorphism
+Polymorphism means "many forms".
+It occurs when we have many classes that are related to each other by inheritance.
+Polymorphism uses methods gotten from Inheritance to perform different tasks.
+This allows us to perform a single action in different ways.
+    Why And When To Use "Inheritance" and "Polymorphism"?
+- It is useful for code reusability
+reuse attributes and methods of an existing class when you create a new class.
+
+    Java super
+In Java, the super keyword is used to refer to the parent class of a subclass.
+The most common use of the super keyword is to eliminate the confusion between
+superclasses and subclasses that have methods with the same name.
+    It can be used in two main ways:
+1)To access attributes and methods from the parent class.
+If a subclass has a method with the same name as one in its parent class,
+you can use super to call the parent version.
+Use super when you want to call a method from the parent class that has been overridden in the child class.
+2)To call the parent class constructor.
+Use super() to call the constructor of the parent class.
+This is especially useful for reusing initialization code.
+The call to super() must be the first statement in the subclass constructor.
+
+    Java Inner Classes
+In Java, it is also possible to nest classes (a class within a class).
+The purpose of nested classes is to group classes that belong together, which makes your code more readable and maintainable.
+To access the inner class
+create an object of the outer class, and then create an object of the inner class
+-If you try to access a private inner class from an outside class, an error occurs
+    Static Inner Class
+An inner class can also be static, which means that you can access it without creating an object of the outer class.
+    Access Outer Class From Inner Class
+One advantage of inner classes, is that they can access attributes and methods of the outer class.
+
+    Java Abstraction
+Abstract Classes and Methods
+Data abstraction is the process of hiding certain details and showing only essential information to the user.
+Abstraction can be achieved with either abstract classes or interfaces.
+The abstract keyword is a non-access modifier, used for classes and methods
+1)Abstract class: is a restricted class that cannot be used to create objects.
+(to access it, it must be inherited from another class).
+2)Abstract method: can only be used in an abstract class, and it does not have a body.
+The body is provided by the subclass (inherited from).
+
+    Java Interface
+Another way to achieve abstraction in Java, is with interfaces.
+An interface is a completely "abstract class" that is used to group related methods with empty bodies.
+To access the interface methods, the interface must be "implemented" (kinda like inherited) by
+another class with the implements keyword (instead of extends).
+The body of the interface method is provided by the "implement" class.
+    Notes on Interfaces
+1)Like abstract classes, interfaces cannot be used to create objects.
+2)Interface methods do not have a body - the body is provided by the "implement" class.
+3)On implementation of an interface, you must override all of its methods.
+4)Interface methods are by default abstract and public.
+5)Interface attributes are by default public, static and final.
+6)An interface cannot contain a constructor (as it cannot be used to create objects).
+    Why And When To Use Interfaces?
+1)To achieve security - hide certain details and only show the important details of an object (interface).
+2)Java does not support "multiple inheritance" (a class can only inherit from one superclass).
+However, it can be achieved with interfaces, because the class can implement multiple interfaces.
+    Multiple Interfaces
+To implement multiple interfaces, separate them with a comma.
+
+    Java Enums
+Enum is short for "enumerations", which means "specifically listed"
+An enum is a special "class" that represents a group of constants.
+(unchangeable variables, like final variables).
+To create an enum,
+-use the enum keyword and separate the constants with a comma.
+Note that they should be in uppercase letters.
+You can access enum constants with the dot syntax.
+-The enum type has a values() method, which returns an array of all enum constants.
+This method is useful when you want to loop through the constants of an enum.
+    Difference between Enums and Classes
+1)The only difference is that enum constants are public, static and final
+(unchangeable - cannot be overridden).
+2)An enum cannot be used to create objects, and it cannot extend other classes
+(but it can implement interfaces).
+    Why And When To Use Enums?
+Use enums when you have values that you know aren't going to change, like month days, days, colors, deck of cards, etc.
+
+    Java User Input (Scanner)
+The Scanner class is used to get user input,
+and it is found in the java.util package.
+To use the Scanner class, create an object of the class and use any of the available methods found in the Scanner class documentation.
+
+    Java Date and Time
+Java does not have a built-in Date class,
+but we can import the java.time package to work with the date and time API
+The package includes many date and time classes.
+1)LocalDate: Represents a date (year, month, day (yyyy-MM-dd)).
+2)LocalTime: Represents a time (hour, minute, second and nanoseconds (HH-mm-ss-ns)).
+3)LocalDateTime: Represents both a date and a time (yyyy-MM-dd-HH-mm-ss-ns).
+4)DateTimeFormatter: Formatter for displaying and parsing date-time objects.
+    Display Current Date
+To display the current date, import the java.time.LocalDate class, and use its now() method.
+    Display Current Time
+To display the current time (hour, minute, second, and nanoseconds), import the java.time.LocalTime class,
+and use its now() method
+    Display Current Date and Time
+To display the current date and time, import the java.time.LocalDateTime class, and use its now() method.
+    Formatting Date and Time
+You can use the DateTimeFormatter class with the ofPattern() method in the same
+package to format or parse date-time objects.
+The ofPattern() method accepts all sorts of values, if you want to display the date and time in a different format.
+
+    Java Errors
+Types of Errors in Java
+1)Compile-Time Error: Detected by the compiler. Prevents code from running.
+2)Runtime Error: Occurs while the program is running. Often causes crashes.
+3)Logical Error: Code runs but gives incorrect results. Hardest to find.
+    Common Compile-Time Errors
+Compile-time errors occur when the program cannot compile due to syntax or type issues.
+1)missing semicolon
+2)undecleared Variable
+3)Mismatched Types
+    Common Runtime Errors
+Runtime errors occur when the program compiles but crashes or behaves unexpectedly.
+1)Division by zero
+2)Array Index Out of Bounds
+    Logical Errors
+Logical errors happen when the code runs, but the result is not what you thought.
+    Good Habits to Avoid Errors
+1)Use meaningful variable names.
+2)Read the error message carefully. What line does it mention?
+3)Check for missing semicolons or braces.
+4)Look for typos in variable or method names.
+
+    Java Debugging
+Debugging is the process of identifying and fixing errors or bugs in your code.
+    It often involves:
+-Reading error messages
+-Tracing variable values step by step
+-Testing small pieces of code independently
+    Print Statements for Debugging
+The most basic (and often most effective) way to debug Java code is to use System.out.println()
+to print values and check the flow of the program.
+-Add print statements before and after key lines of code to find out where things go wrong.
+    Debugging with IDEs
+Modern IDEs like IntelliJ IDEA, Eclipse, and NetBeans come with built-in debugging tools.
+-Set breakpoints to pause the program at specific lines
+-Step through code line by line
+-Inspect variable values in real time
+Tip: Use your IDE's debugger to find errors faster - it's more powerful than print statements alone!
+    Debugging Checklist
+-Read the full error message, it often tells you exactly what's wrong
+-Check if all variables are initialized before use
+-Print variable values to trace the problem
+-Watch for off-by-one errors in loops and arrays
+-Comment out sections of code to find bugs
+    Java Exceptions
+When an error occurs, Java will throw an exception (throw an error).
+    Exception Handling (try and catch)
+Exception handling lets you catch and handle errors during runtime - so your program doesn't crash.
+-The "try" statement allows you to define a block of code to be tested for errors while it is being executed.
+-The "catch" statement allows you to define a block of code to be executed, if an error occurs in the try block.
+The try and catch keywords come in pairs.
+    Finally
+The finally statement lets you execute code, after try...catch, regardless of the result:
+    The throw keyword
+The throw statement allows you to create a custom error.
+The throw statement is used together with an exception type.
+There are many exception types available in Java.
+
+    Java Files
+File handling is an important part of any application.
+Java has several methods for creating, reading, updating, and deleting files.
+The File class from the java.io package, allows us to work with files.
+To use the File class, create an object of the class, and specify the filename or directory name.
+The File class has many useful methods for creating and getting information about files.
+For example:
+    Method	            Type	            Description
+1)canRead()	            Boolean	            Tests whether the file is readable or not
+2)canWrite()	        Boolean	            Tests whether the file is writable or not
+3)createNewFile()	    Boolean	            Creates an empty file
+4)delete()	            Boolean	            Deletes a file
+5)exists()	            Boolean	            Tests whether the file exists
+6)getName()	            String	            Returns the name of the file
+7)getAbsolutePath()	    String	            Returns the absolute pathname of the file
+8)length()	            Long	            Returns the size of the file in bytes
+9)list()	            String[]	        Returns an array of the files in the directory
+10)mkdir()         	    Boolean	            Creates a directory
+
+    Java Create and Write To Files
+1)Create a File
+To create a file in Java, you can use the createNewFile() method.
+This method returns a boolean value: true if the file was successfully created,
+and false if the file already exists.
+2)Write To a File
+we use the FileWriter class together with its write() method to write some text to the file we created in the example above.
+when you are done writing to the file, you should close it with the close() method.
+3)Read a File
+we use the Scanner class to read the contents of the text file we created in the previous chapter.
+    Get File Information
+To get more information about a file, use any of the File methods.
+    Java Delete Files
+To delete a file in Java, use the delete() method.
+    Delete a Folder
+You can also delete a folder. However, it must be empty.
+
+    Java Data Structures
+Data structures are ways to store and organize data so you can use it efficiently.
+An array is an example of a data structure, which allows multiple elements to be stored in a single variable.
+Java includes many other data structures as well, in the java.util package.
+Each is used to handle data in different ways.
+The common ones are :
+1)ArrayList
+2)HashSet
+3)HashMap
+Tip: Data structures are like supercharged arrays - more flexible and feature-rich!
+    ArrayList
+An ArrayList is a resizable array that can grow as needed.
+It allows you to store elements and access them by index.
+    HashSet
+A HashSet is a collection where every element is unique -
+no duplicates are allowed.
+    HashMap
+A HashMap stores key-value pairs,
+which are great when you want to store values and find them by a key (like a name or ID).
+    Iterators
+An iterator is a way to loop through elements in a data structure.
+It is called an "iterator" because "iterating" is the technical term for looping.
