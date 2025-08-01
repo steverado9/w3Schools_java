@@ -708,3 +708,218 @@ which are great when you want to store values and find them by a key (like a nam
     Iterators
 An iterator is a way to loop through elements in a data structure.
 It is called an "iterator" because "iterating" is the technical term for looping.
+
+    The Collections Framework
+The Java Collections Framework provides a set of interfaces (like List, Set, and Map)
+and a set of classes (ArrayList, HashSet, HashMap, etc.) that implement those interfaces.
+All of these are part of the java.util package.
+They are used to store, search, sort, and organize data more easily - all using standardized methods and patterns.
+    Core Interfaces in the Collections Framework
+Here are some common interfaces, along with their classes:
+Interface	               Common Classes	                                        Description
+1)List	                   ArrayList, LinkedList	                                Ordered collection that allows duplicates.
+2)Set	                   HashSet, TreeSet, LinkedHashSet	                        Collection of unique elements.
+3)Map	                   HashMap, TreeMap, LinkedHashMap	                        Stores key-value pairs with unique keys.
+        Overview of Classes
+The table below gives an overview of the common data structure classes and their characteristics:
+Interface	                        Class	                                  Description
+1)List	                            ArrayList	                              Resizable array that maintains order and allows duplicates.
+                                    LinkedList	                              List with fast insert and remove operations.
+
+2)Set	                            HashSet	                                  Unordered collection of unique elements.
+                                    TreeSet	                                  Sorted set of unique elements (natural order).
+                                    LinkedHashSet	                          Maintains the order in which elements were inserted.
+
+3)Map	                            HashMap	                                  Stores key/value pairs with no specific order.
+                                    TreeMap	                                  Sorted map based on the natural order of keys.
+                                    LinkedHashMap	                          Maintains the order in which keys were inserted.
+
+            Java List Interface
+The List interface is part of the Java Collections Framework and represents an ordered collection of elements.
+You can access elements by their index, add duplicates, and maintain the insertion order.
+Since List is an interface, you cannot create a List object directly.
+Instead, you use a class that implements the List interface, such as
+-ArrayList - like a resizable array with fast random access.
+-LinkedList - like a train of cars you can easily attach or remove.
+    Common List Methods
+-add()	Adds an element to the end of the list
+-get()	Returns the element at the specified position
+-set()	Replaces the element at the specified position
+-remove()	Removes the element at the specified position
+-size() Returns the number of elements in the list
+    Array                                   List
+Fixed size	                            Dynamic size
+Faster performance for raw data	        More flexible and feature-rich
+Not part of Collections Framework	    Part of the Collections Framework
+
+    Java ArrayList
+An ArrayList is like a resizable array.
+It is part of the java.util package and implements the List interface.
+To use an ArrayList, you must first import it from java.util.
+Now you can use methods like add(), get(), set(), and remove() to manage your list of elements.
+    Add Elements
+To add elements to an ArrayList, use the add() method.
+You can also add an element at a specified position by referring to the index number.
+An ArrayList keeps elements in the same order you add them.
+    Access an Element
+To access an element in the ArrayList,
+use the get() method and refer to the index number.
+    Change an Element
+To modify an element,
+use the set() method and refer to the index number.
+    Remove an Element
+To remove an element,
+use the remove() method and refer to the index number.
+To remove all the elements in the ArrayList,
+use the clear() method
+    ArrayList Size
+To find out how many elements an ArrayList have,
+use the size method.
+    Loop Through an ArrayList
+Loop through the elements of an ArrayList with a for loop, and use the size() method
+to specify how many times the loop should run.
+    Sort an ArrayList
+Another useful class in the java.util package is the Collections class, which include the sort() method
+The sort() method sorts lists alphabetically or numerically
+    The List Interface
+Sometimes you will see both List and ArrayList in Java code, like this:
+    import java.util.List;
+    import java.util.ArrayList;
+    List<String> cars = new ArrayList<>();
+
+This means the variable (cars) is declared as a List (the interface),
+but it stores an ArrayList object (the actual list).
+
+    Java LinkedList
+The LinkedList class is almost identical to the ArrayList.
+The LinkedList class has the same methods as ArrayList because both follow the List interface.
+    How the LinkedList works
+The LinkedList stores its elements in "containers."
+The list has a link to the first container and each container has a link to the next container in the list.
+To add an element to the list, the element is placed into a new container and that
+container is linked to one of the other containers in the list.
+    When To Use
+Use an ArrayList for storing and accessing data, and LinkedList to manipulate data.
+    LinkedList Methods
+1)addFirst(): Adds an element to the beginning of the list.
+2)addLast(): Add an element to the end of the list.
+3)removeFirst(): Remove an element from the beginning of the list.
+4)removeLast(): Remove an element from the end of the list.
+5)getFirst(): Get the element at the beginning of the list.
+6)getLast(): Get the element at the end of the list
+
+    Java List Sorting
+Another useful class in the java.util package is the Collections class,
+which include the sort() method for sorting lists alphabetically or numerically.
+
+    Java Set
+The Set interface is part of the Java Collections Framework and is used to store a collection of unique elements.
+Unlike a List, a Set does not allow duplicates.
+    Common classes that implement Set
+-HashSet - fast and unordered
+-TreeSet - sorted set
+-LinkedHashSet - ordered by insertion
+    Common Set Methods
+-add(): Adds an element if it's not already in the set
+-remove(): Removes the element from the set
+-contains(): Checks if the set contains the element
+-size(): Returns the number of elements
+-clear(): Removes all elements
+List	                    Set
+Allows duplicates	        Does not allow duplicates
+Maintains order	            Does not guarantee order
+Access by index	            No index-based access
+
+    Java HashSet
+A HashSet is a collection of elements where every element is unique.
+It is part of the java.util package and implements the Set interface.
+    Check If an Element Exists
+To check whether an element exists in a HashSet,
+use the contains() method.
+    Remove an Element
+To remove an element, use the remove() method.
+To remove all elements, use the clear() method.
+    HashSet Size
+Use size() to count how many unique elements are in the set.
+
+    Java TreeSet
+A TreeSet is a collection that stores unique elements in sorted order.
+It is part of the java.util package and implements the Set interface.
+Unlike HashSet, which has no order, TreeSet keeps its elements sorted automatically.
+Now you can use methods like add(), contains(), and remove() to manage your sorted set of elements.
+Use "HashSet" when you care about speed,
+and "TreeSet" when you need sorted elements.
+
+    Java LinkedHashSet
+-A LinkedHashSet is a collection that stores unique elements and remembers the order they were added.
+-It is part of the java.util package and implements the Set interface.
+-Use LinkedHashSet when you want a set that does not allow duplicates and keeps the original insertion order.
+-you can use methods like add(), contains(), and remove() to manage your collection.
+-Use HashSet when you only care about uniqueness and speed. Use LinkedHashSet when order matters.
+
+    Java Map Interface
+The Map interface is a part of the Java Collections Framework and is used to store key-value pairs.
+Each key must be unique, but values can be duplicated.
+A Map is useful when you want to associate a key with a value.
+    Common classes that implement Map:
+1)HashMap - fast and unordered
+2)TreeMap - sorted by key
+3)LinkedHashMap - ordered by insertion
+    Common Map Methods
+1)put(): Adds or updates a key-value pair
+2)get(): Returns the value for a given key
+3)remove():	Removes the key and its value
+4)containsKey(): Checks if the map contains the key
+5)keySet(): Returns a set of all keys
+    Java HashMap
+A HashMap stores items in key/value pairs, where each key maps to a specific value.
+It is part of the java.util package and implements the Map interface.
+A HashMap can store many different combinations, such as:
+-String keys and Integer values.
+-String keys and String values.
+You can use methods like put() to add key/value pairs,
+get() to retrieve a value by key, and
+remove() to delete an entry - all by using keys instead of index numbers.
+-If there is a duplicate value,
+the latest value will overwrite the previous one, because keys in a HashMap must be unique.
+-Note: The size only counts unique keys.
+If a key is added more than once, only the latest value is kept.
+-Note: When looping through a Hashmap
+Use the keySet() method if you only want the keys, and
+use the values() method if you only want the values.
+
+    Java TreeMap
+A TreeMap is a collection that stores key/value pairs in sorted order by key.
+It is part of the java.util package and implements the Map interface.
+you can use methods like put(), get(), and remove() to manage sorted key/value pairs.
+The size only counts unique keys.
+If a key is added more than once, only the latest value is kept.
+    Loop Through a TreeMap
+Loop through the items of a TreeMap with a for-each loop.
+Use the keySet() method if you only want the keys,
+and use the values() method if you only want the values.
+Use HashMap for performance, and TreeMap when you need sorted keys.
+    Java LinkedHashMap
+A LinkedHashMap stores keys and values,
+and keeps them in the same order you put them in.
+It is part of the java.util package and implements the Map interface.
+Use LinkedHashMap when you want predictable iteration order (insertion order).
+Duplicates are ignored.
+The size only counts unique keys. If a key is added more than once, only the latest value is kept.
+    Loop Through a LinkedHashMap
+You can loop through a LinkedHashMap using a for-each loop. Use:
+    keySet() to get all keys
+    values() to get all values
+ Use LinkedHashMap when you want the map to remember the order in which entries were added.
+
+        Java Iterator
+An Iterator is an object that can be used to loop through collections.
+like ArrayList and HashSet.
+It is called an "iterator" because "iterating" is the technical term for looping.
+To use an Iterator, you must import it from the java.util package.
+    Getting an Iterator
+The iterator() method can be used to get an Iterator for any collection
+    Removing Items from a Collection
+Iterators are designed to easily change the collections that they loop through.
+The remove() method can remove items from a collection while looping.
+Note: Trying to remove items using a for loop or a for-each loop would not work correctly because the collection is changing size at the same time that the code is trying to loop.

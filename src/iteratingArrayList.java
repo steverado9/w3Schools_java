@@ -13,6 +13,9 @@ public class iteratingArrayList {
         //Get an iterator for the ArrayList
         Iterator<String> it = cars.iterator();
 
+        //Prnt the first item
+//        System.out.println(it.next());
+
         //Iterate through the list using the iterator
         while(it.hasNext()) {
             System.out.println(it.next());
