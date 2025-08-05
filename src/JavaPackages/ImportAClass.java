@@ -12,7 +12,7 @@ class ImportAClass {
         Scanner myObj = new Scanner(System.in);
         System.out.println("Enter username");
 
-        String userName = myObj.nextLine();
-        System.out.println("Username is: " + userName);
+        int userName = Integer.parseInt(myObj.nextLine());
+        System.out.println(userName * 2);
     }
 }
